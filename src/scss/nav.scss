@@ -1,0 +1,72 @@
+@use "./variables.scss";
+@use "./breakpoints.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem auto 40px;
+  max-width: 1200px;
+  padding: 0 30px;
+
+  @include breakpoints.break("medium") {
+    padding: 0 50px;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    max-width: 80px;
+
+    @include breakpoints.break("medium") {
+      max-width: 120px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+
+    @include breakpoints.break("medium") {
+      display: none;
+    }
+
+    span {
+      width: 30px;
+      height: 3px;
+      background-color: variables.$blue;
+    }
+  }
+
+  .navlinks {
+    display: none;
+    gap: 1.5rem;
+
+    li {
+      list-style-type: none;
+    }
+
+    @include breakpoints.break("medium") {
+      display: flex;
+    }
+  }
+}
+
+nav.clickedBurger {
+  flex-direction: column;
+
+  .navlinks {
+    display: flex;
+    flex-direction: column;
+  }
+}
