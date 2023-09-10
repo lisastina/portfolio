@@ -1,0 +1,47 @@
+// General styling
+
+@use "./variables.scss";
+@use "./breakpoints.scss";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: variables.$font-color;
+  font-family: map-get(variables.$font-family, mr-eaves);
+  font-size: variables.$font-size;
+  font-weight: variables.$font-weight;
+  background-color: variables.$beige;
+}
+
+a,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: variables.$blue;
+}
+
+.content {
+  max-width: 1080px;
+  margin: 0 auto 4rem;
+}
+
+h1 {
+  font-family: map-get(variables.$font-family, fino-sans);
+}
+
+h2 {
+  font-weight: 400;
+}
