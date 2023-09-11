@@ -4,20 +4,39 @@
   margin: 140px auto 0;
   padding: 0 30px;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(177px, 1fr));
+  justify-items: center;
+  grid-gap: 1rem;
 
-  ul {
-    &__image {
-      max-width: 177px;
-      aspect-ratio: 1/1;
+  @include breakpoints.break("medium") {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  @include breakpoints.break("large") {
+    margin-top: 250px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 
-      @include breakpoints.break("medium") {
-        max-width: 330px;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+  &__image {
+    aspect-ratio: 1/1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__bird {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 35%;
+      height: 35%;
+      object-fit: contain;
     }
   }
 }

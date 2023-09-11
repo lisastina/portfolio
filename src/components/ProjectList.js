@@ -6,22 +6,22 @@ const ProductList = ({ products }) => {
     { name: "fotobok2", img: "/assets/fotobok_01.jpg" },
     { name: "fotobok3", img: "/assets/fotobok_01.jpg" },
     { name: "fotobok4", img: "/assets/fotobok_01.jpg" },
+    { name: "fotobok5", img: "/assets/fotobok_01.jpg" },
   ];
   return (
-    <div className="projectList">
-      <ul>
-        {productsTest?.map((product) => {
-          return (
-            <li key={product.name} className="projectList__image">
-              <img src={product.img} alt={product.name} />
-            </li>
-          );
-        })}
-      </ul>
-      {/* <div className="projectList__bird">
+    <ul className="projectList">
+      {productsTest?.map((product) => {
+        return (
+          <li className="projectList__image" key={product.name}>
+            <img key={product.name} src={product.img} alt={product.name} />
+          </li>
+        );
+      })}
+
+      <div className="projectList__bird">
         <img src="/assets/bird.png" alt="bird" />
-      </div> */}
-    </div>
+      </div>
+    </ul>
   );
 };
 

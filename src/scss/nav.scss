@@ -11,6 +11,11 @@ nav {
 
   @include breakpoints.break("medium") {
     padding: 0 50px;
+    margin-bottom: 100px;
+  }
+
+  @include breakpoints.break("large") {
+    margin-bottom: 150px;
   }
 
   .nav-container {
