@@ -1,14 +1,19 @@
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./main.scss";
 import Nav from "./components/Nav";
 import HomePage from "./components/HomePage";
-import "./main.scss";
+import ProjectPage from "./components/ProjectPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Nav />
       <div className="content">
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project" element={<ProjectPage />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
