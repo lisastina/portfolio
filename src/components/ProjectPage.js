@@ -19,6 +19,7 @@ const ProjectPage = () => {
         </div>
       </div>
 
+      {/* Content */}
       <div className="projectPage__content">
         <p>
           Alla nya foton är tagna av mig, redigerade i Adobe Lightroom och
