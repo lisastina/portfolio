@@ -35,7 +35,11 @@ a:hover {
 
 .content {
   max-width: 1080px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2rem;
+
+  @include breakpoints.break("large") {
+    margin: 0 auto 4rem;
+  }
 }
 
 h1 {
