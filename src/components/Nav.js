@@ -1,10 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useScrollLock } from "../hooks/useScrollLock";
 
 const Navbar = () => {
-  const [clickedBurger, setClickedBurger] = useState(true);
+  const [clickedBurger, setClickedBurger] = useState(false);
+  const { lockScroll, unlockScroll } = useScrollLock();
 
+  const handleBurgerClick = () => {
+    if (clickedBurger === false) {
+      setClickedBurger(true);
+      lockScroll();
+      window.scroll({
+        top: 0,
+        left: 0,
+      });
+    }
+    if (clickedBurger === true) {
+      setClickedBurger(false);
+      unlockScroll();
+    }
+  };
+
+  /* Close hamburger menu if window resizes */
   useEffect(() => {
     function handleResize() {
       setClickedBurger(false);
@@ -23,11 +41,8 @@ const Navbar = () => {
           <img src="/assets/logo-sm.png" alt="logo" />
         </Link>
 
-        {/* Hamburger menu */}
-        <div
-          className="burger"
-          onClick={() => setClickedBurger(!clickedBurger)}
-        >
+        {/* Hamburger icon */}
+        <div className="burger" onClick={handleBurgerClick}>
           <span></span>
           <span></span>
           <span></span>
@@ -37,7 +52,9 @@ const Navbar = () => {
       {/* Navigation links */}
       <ul className="navlinks">
         <li>
-          <Link to="/kontakt">Kontakt</Link>
+          <Link to="/kontakt" onClick={() => setClickedBurger(false)}>
+            Kontakt
+          </Link>
         </li>
         <li>
           <a href="https://www.instagram.com/lisastina.h/">Instagram</a>
