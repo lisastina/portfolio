@@ -37,7 +37,7 @@ const Navbar = () => {
     <nav className={`${clickedBurger && "clickedBurger"}`}>
       <div className="nav-container">
         {/* Logo */}
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" onClick={() => setClickedBurger(false)}>
           <img src="/assets/logo-sm.png" alt="logo" />
         </Link>
 
