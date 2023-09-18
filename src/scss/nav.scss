@@ -78,6 +78,8 @@ nav.clickedBurger {
   height: 100vh;
 
   .navlinks {
+    position: relative;
+    top: -100px;
     display: flex;
     flex-direction: column;
     justify-content: center;

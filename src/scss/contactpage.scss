@@ -2,19 +2,21 @@
 @use "./variables.scss";
 
 .contactPage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: -40px;
+  height: 80vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 50px;
 
   @include breakpoints.break("medium") {
-    left: 45%;
-    flex-direction: row-reverse;
+    top: -100px;
     gap: 30px;
+  }
+  @include breakpoints.break("large") {
+    top: -150px;
   }
 
   &__image {
