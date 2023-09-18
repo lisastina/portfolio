@@ -1,0 +1,50 @@
+@use "./breakpoints.scss";
+@use "./variables.scss";
+
+.contactPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+
+  @include breakpoints.break("medium") {
+    left: 45%;
+    flex-direction: row-reverse;
+    gap: 30px;
+  }
+
+  &__image {
+    width: 120px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    h1 {
+      text-align: center;
+      font-family: map-get(variables.$font-family, mr-eaves);
+      font-size: 1rem;
+
+      @include breakpoints.break("medium") {
+        font-size: 1.3rem;
+      }
+    }
+    a {
+      font-weight: 400;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include breakpoints.break("medium") {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
