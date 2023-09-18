@@ -36,6 +36,20 @@ nav {
     }
   }
 
+  .navlinks {
+    display: none;
+    gap: 1.5rem;
+    font-weight: 400;
+
+    li {
+      list-style-type: none;
+    }
+
+    @include breakpoints.break("medium") {
+      display: flex;
+    }
+  }
+
   .burger {
     display: flex;
     flex-direction: column;
@@ -50,20 +64,11 @@ nav {
       width: 30px;
       height: 3px;
       background-color: variables.$blue;
+      transform-origin: 4px 0px;
     }
-  }
-
-  .navlinks {
-    display: none;
-    gap: 1.5rem;
-    font-weight: 400;
-
-    li {
-      list-style-type: none;
-    }
-
-    @include breakpoints.break("medium") {
-      display: flex;
+    span:first-child,
+    span:nth-child(3) {
+      transition: 0.3s;
     }
   }
 }
@@ -79,5 +84,19 @@ nav.clickedBurger {
     align-items: center;
     height: 100%;
     text-align: center;
+  }
+
+  .burger {
+    span:first-child {
+      transform: rotate(45deg) translate(4px, 1.5px);
+      transition: 0.3s;
+    }
+    span:nth-child(2) {
+      visibility: hidden;
+    }
+    span:nth-child(3) {
+      transition: 0.3s;
+      transform: rotate(-45deg) translate(0, -1px);
+    }
   }
 }
