@@ -70,9 +70,14 @@ nav {
 
 nav.clickedBurger {
   flex-direction: column;
+  height: 100vh;
 
   .navlinks {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
   }
 }
