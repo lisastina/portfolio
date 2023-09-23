@@ -1,0 +1,46 @@
+@use "./breakpoints.scss";
+@use "./variables.scss";
+
+.login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoints.break("large") {
+    top: -50px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    font-family: map-get(variables.$font-family, mr-eaves);
+    margin-bottom: 1.3rem;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      font-weight: 400;
+    }
+    input[type="text"],
+    input[type="password"] {
+      font-size: 0.7rem;
+      border: 1px solid variables.$blue;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+  }
+  input[type="submit"] {
+    font-family: map-get(variables.$font-family, mr-eaves);
+    background-color: variables.$blue;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+}
