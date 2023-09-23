@@ -21,7 +21,7 @@ const ProjectPage = () => {
 
       {/* Content */}
       <div className="projectPage__content">
-        <p>
+        <p className="text">
           Alla nya foton är tagna av mig, redigerade i Adobe Lightroom och
           Photoshop. Layout skapad i InDesign.
         </p>
@@ -29,7 +29,7 @@ const ProjectPage = () => {
           <img src="/assets/fotobok_01.jpg" alt="fotobok" />
         </div>
 
-        <p className="small">
+        <p className="small text">
           Jag tryckte upp boken i liten upplaga för att dela med mig av till
           vänner och familj. Några få exemplar har sålts på Fiskemuseet på Hönö.
         </p>
@@ -39,7 +39,7 @@ const ProjectPage = () => {
         <div className="projectPage__image">
           <img src="/assets/fotobok_01.jpg" alt="fotobok" />
         </div>
-        <p>
+        <p className="text">
           Boken innehåller foton av ön Hönö i Öckerö kommun, som ligger i
           Göteborgs skärgård. Jag har samlat på mig gamla foton och återvänt
           till platsen de tagits för att kunna jämföra sida vid sida

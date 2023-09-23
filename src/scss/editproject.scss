@@ -1,0 +1,37 @@
+@use "./breakpoints.scss";
+@use "./variables.scss";
+
+.editProject {
+  label {
+    display: block;
+  }
+
+  input#title {
+    font-family: map-get(variables.$font-family, fino-sans);
+    font-size: 1.2rem;
+
+    @include breakpoints.break("medium") {
+      font-size: 1.4rem;
+    }
+  }
+  input#subtitle {
+    font-size: 0.8rem;
+    @include breakpoints.break("medium") {
+      font-size: 0.9rem;
+    }
+  }
+  input,
+  textarea {
+    color: variables.$blue;
+    width: 100%;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid variables.$blue;
+  }
+  textarea {
+    font-family: map-get(variables.$font-family, mr-eaves);
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.7rem;
+    resize: none;
+  }
+}
