@@ -53,3 +53,8 @@ h2 {
 img {
   display: block;
 }
+
+input[type="text"],
+textarea {
+  box-sizing: border-box;
+}
