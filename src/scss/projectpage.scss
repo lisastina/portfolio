@@ -2,6 +2,15 @@
 
 .projectPage {
   padding: 0 30px;
+  margin-top: 40px;
+
+  @include breakpoints.break("medium") {
+    margin-top: 100px;
+  }
+
+  @include breakpoints.break("large") {
+    margin-top: 150px;
+  }
 
   &__hero {
     display: flex;
@@ -29,9 +38,6 @@
 
     p {
       margin-top: 30px;
-      @include breakpoints.break("medium") {
-        font-size: 1.25rem;
-      }
 
       @include breakpoints.break("medium") {
         margin-top: 40px;

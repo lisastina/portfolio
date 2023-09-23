@@ -3,7 +3,6 @@
 
 .contactPage {
   position: relative;
-  top: -40px;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -12,11 +11,7 @@
   gap: 50px;
 
   @include breakpoints.break("medium") {
-    top: -100px;
     gap: 30px;
-  }
-  @include breakpoints.break("large") {
-    top: -150px;
   }
 
   &__image {

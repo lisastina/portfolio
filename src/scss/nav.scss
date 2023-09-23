@@ -5,17 +5,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem auto 40px;
+  margin: 1.5rem auto 0;
   max-width: 1200px;
   padding: 0 30px;
 
   @include breakpoints.break("medium") {
     padding: 0 50px;
-    margin-bottom: 100px;
-  }
-
-  @include breakpoints.break("large") {
-    margin-bottom: 150px;
   }
 
   .nav-container {
