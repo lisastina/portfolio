@@ -2,14 +2,11 @@
 @use "./variables.scss";
 
 .login {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include breakpoints.break("large") {
-    top: -50px;
-  }
+  margin: 100px auto 0;
+  height: 80vh;
 
   h1 {
     font-size: 1.6rem;
@@ -34,4 +31,12 @@
       padding: 0.5rem;
     }
   }
+  // input[type="submit"] {
+  //   font-family: map-get(variables.$font-family, mr-eaves);
+  //   background-color: variables.$blue;
+  //   color: #fff;
+  //   font-size: 1rem;
+  //   padding: 0.5rem 1rem;
+  //   cursor: pointer;
+  // }
 }
