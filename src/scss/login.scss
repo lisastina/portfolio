@@ -34,12 +34,4 @@
       padding: 0.5rem;
     }
   }
-  input[type="submit"] {
-    font-family: map-get(variables.$font-family, mr-eaves);
-    background-color: variables.$blue;
-    color: #fff;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
 }
