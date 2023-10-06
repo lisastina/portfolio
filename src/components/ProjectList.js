@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductList = ({ products }) => {
   const productsTest = [
@@ -13,14 +14,16 @@ const ProductList = ({ products }) => {
       {productsTest?.map((product) => {
         return (
           <li className="projectList__image" key={product.name}>
-            <img key={product.name} src={product.img} alt={product.name} />
+            <Link to="/projekt">
+              <img key={product.name} src={product.img} alt={product.name} />
+            </Link>
           </li>
         );
       })}
 
-      <div className="projectList__bird">
+      <figure className="projectList__bird">
         <img src="/assets/bird.png" alt="bird" />
-      </div>
+      </figure>
     </ul>
   );
 };

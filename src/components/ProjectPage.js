@@ -14,9 +14,9 @@ const ProjectPage = () => {
             blandas med mina egna för att jämföra dåtid med nutid.
           </p>
         </div>
-        <div className="projectPage__heroimage">
+        <figure className="projectPage__heroimage">
           <img src="/assets/fotobok_01.jpg" alt="fotobok" />
-        </div>
+        </figure>
       </div>
 
       {/* Content */}
@@ -25,20 +25,20 @@ const ProjectPage = () => {
           Alla nya foton är tagna av mig, redigerade i Adobe Lightroom och
           Photoshop. Layout skapad i InDesign.
         </p>
-        <div className="projectPage__image">
+        <figure className="projectPage__image">
           <img src="/assets/fotobok_01.jpg" alt="fotobok" />
-        </div>
+        </figure>
 
         <p className="small text">
           Jag tryckte upp boken i liten upplaga för att dela med mig av till
           vänner och familj. Några få exemplar har sålts på Fiskemuseet på Hönö.
         </p>
-        <div className="projectPage__image">
+        <figure className="projectPage__image">
           <img src="/assets/fotobok_01.jpg" alt="fotobok" />
-        </div>
-        <div className="projectPage__image">
+        </figure>
+        <figure className="projectPage__image">
           <img src="/assets/fotobok_01.jpg" alt="fotobok" />
-        </div>
+        </figure>
         <p className="text">
           Boken innehåller foton av ön Hönö i Öckerö kommun, som ligger i
           Göteborgs skärgård. Jag har samlat på mig gamla foton och återvänt
@@ -46,9 +46,9 @@ const ProjectPage = () => {
           förändringarna som skett under åren. Boken innehåller även texter och
           dikter lånade från lokala skribenter.
         </p>
-        <div className="projectPage__image">
+        <figure className="projectPage__image">
           <img src="/assets/fotobok_01.jpg" alt="fotobok" />
-        </div>
+        </figure>
       </div>
     </div>
   );

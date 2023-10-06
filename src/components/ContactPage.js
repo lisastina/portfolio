@@ -9,9 +9,9 @@ const ContactPage = () => {
           lisastina.hansson@gmail.com
         </a>
       </div>
-      <div className="contactPage__image">
+      <figure className="contactPage__image">
         <img src="/assets/letter-bird.png" alt="bird with letter" />
-      </div>
+      </figure>
     </div>
   );
 };
